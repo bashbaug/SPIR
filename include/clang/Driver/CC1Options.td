@@ -617,6 +617,18 @@ def cl_spirv_compat_mode : Separate<["-"], "cl-spirv-compat-mode">,
 def cl_spirv_compat_mode_EQ : Joined<["-"], "cl-spirv-compat-mode=">,
   Alias<cl_spirv_compat_mode>;
 
+// Khronos Extensions:
+def : Flag<["-"], "cl_khr_fp16">, Alias<cl_enable_half>,
+  HelpText<"OpenCL only. This option enables the cl_khr_fp16 extension.">;
+def cl_khr_subgroups : Flag<["-"], "cl_khr_subgroups">,
+  HelpText<"OpenCL only. This option enables the cl_khr_subgroups extension.">;
+
+// Vendor Extensions
+def cl_intel_subgroups : Flag<["-"], "cl_intel_subgroups">,
+  HelpText<"OpenCL only. This option enables the cl_intel_subgroups extension.">;
+def cl_intel_subgroups_short : Flag<["-"], "cl_intel_subgroups_short">,
+  HelpText<"OpenCL only. This option enables the cl_intel_subgroups_short extension.">;
+
 
 // SPIR generator options
 def cl_spir_compile_options : Separate<["-"], "cl-spir-compile-options">,

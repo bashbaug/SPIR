@@ -1709,6 +1709,10 @@ static void ParseLangArgs(LangOptions &Opts, ArgList &Args, InputKind IK,
   Opts.CLFp64Enable = Args.hasArg(OPT_cl_fp64_enable);
   Opts.CLZeroInitLocalMemVars = Args.hasArg(OPT_cl_zeroinit_lm_vars);
 
+  Opts.CL_cl_khr_subgroups = Args.hasArg(OPT_cl_khr_subgroups);
+  Opts.CL_cl_intel_subgroups = Args.hasArg(OPT_cl_intel_subgroups);
+  Opts.CL_cl_intel_subgroups_short = Args.hasArg(OPT_cl_intel_subgroups_short);
+
   Opts.SPIRVCompatibilityVersion = parseSPIRVVersion(Args, Diags);
   if (Opts.OpenCLCPlusPlus && (Opts.SPIRVCompatibilityVersion == 0 ||
                                Opts.SPIRVCompatibilityVersion >= 101000)) {

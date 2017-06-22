@@ -232,6 +232,10 @@ LANGOPT(CLZeroInitLocalMemVars, 1, 0,
         "static-storage-duration variables, but adds performance penalty. "
         "Currenly only supported for local-scope variables.")
 
+LANGOPT(CL_cl_khr_subgroups, 1, 0, "cl_khr_subgroups enabled")
+LANGOPT(CL_cl_intel_subgroups, 1, 0, "cl_intel_subgroups enabled")
+LANGOPT(CL_cl_intel_subgroups_short, 1, 0, "cl_intel_subgroups_short enabled")
+
 VALUE_LANGOPT(SPIRVCompatibilityVersion, 32, 0,
               "SPIR-V version for OpenCL SPIR-V compatibility mode "
               "(in form: <major> * 100000 + <minor> * 1000 + <revision>; "
